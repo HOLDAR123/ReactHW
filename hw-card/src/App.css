@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400&display=swap");
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Work Sans", sans-serif;
+}
+
+.card-content {
+  height: auto !important;
+  width: auto;
+  border: 2px solid #8d86c9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+  border-radius: 5px;
+  padding: 40px;
+}
+
+img.card-container-img {
+  height: 240px;
+  width: 350px;
+}
+
+.card-container-data {
+  margin: 28px 28px 28px 0px;
+  color: #333333;
+  font-weight: 400;
+}
+
+.card-container-text {
+  max-width: 350px;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.card-container-button {
+  background-color: #8d86c9;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+  border: 1px solid transparent;
+  padding: 15px;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid #8d86c9;
+  border-radius: 5px;
+  padding: 40px;
+  max-width: 80%;
+  z-index: 2;
+}
+
+.modal-transition-enter {
+  opacity: 0;
+  transform: translate(-50%, -70%);
+}
+
+.modal-transition-enter-active {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.modal-transition-exit {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.modal-transition-exit-active {
+  opacity: 0;
+  transform: translate(-50%, -70%);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.close-button {
+  background-color: #8d86c9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.overlay-transition-enter {
+  opacity: 0;
+}
+
+.overlay-transition-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+.overlay-transition-exit {
+  opacity: 1;
+}
+
+.overlay-transition-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
