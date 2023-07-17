@@ -45,6 +45,14 @@ img.card-container-img {
   padding: 15px;
 }
 
+button {
+  transition: 0.4s;
+}
+
+.card-container-button:active {
+  transform: scale(0.9);
+}
+
 .modal {
   position: fixed;
   top: 50%;
