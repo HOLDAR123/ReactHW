@@ -11,6 +11,7 @@ function Todolist() {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [title, setTitle] = useState<string>("");
   const [description, setDescription] = useState<string>("");
+  const [isDarkTheme, setIsDarkTheme] = useState<boolean>(false);
 
   const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTitle(e.target.value);
@@ -38,21 +39,30 @@ function Todolist() {
     }
   };
 
+  const toggleTheme = () => {
+    setIsDarkTheme((prevTheme) => !prevTheme);
+  };
+
   return (
-    <div className={c.todoList}>
+    <div
+      className={`${c.todoList} ${isDarkTheme ? c.darkTheme : c.lightTheme}`}
+    >
       <div className={c.todoListContainer}>
+        <button onClick={toggleTheme} className={c.toggleTheme}>
+          Toggle Theme
+        </button>
         <form className={c.InputsContainer} onSubmit={handleSubmit}>
           <label>
-            Название поручения:
+            Task Title:
             <input
               type="text"
-              placeholder="Название поручения"
+              placeholder="Task Title"
               value={title}
               onChange={handleTitleChange}
             />
           </label>
           <label>
-            Описание:
+            Description:
             <textarea
               cols={30}
               rows={10}
@@ -60,10 +70,10 @@ function Todolist() {
               onChange={handleDescriptionChange}
             ></textarea>
           </label>
-          <button type="submit">Отправить</button>
+          <button type="submit">Submit</button>
         </form>
         <div>
-          <h2>Список задач:</h2>
+          <h2>Task List:</h2>
           <ul>
             {tasks.map((task) => (
               <li key={task.id}>
