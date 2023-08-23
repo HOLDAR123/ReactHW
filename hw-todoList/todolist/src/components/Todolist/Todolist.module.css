@@ -1,0 +1,80 @@
+.todoList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.todoListContainer {
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.InputsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.InputsContainer label {
+  font-weight: bold;
+}
+.InputsContainer input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+}
+.InputsContainer button {
+  background-color: #007bff;
+  border: none;
+  border-radius: 3px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.lightTheme {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.darkTheme {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+strong {
+  color: #007bff;
+}
+
+textarea {
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.toggleTheme {
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}/*# sourceMappingURL=Todolist.module.css.map */
