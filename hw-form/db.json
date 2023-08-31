@@ -1,0 +1,11 @@
+{
+  "users": {
+    "password": "1234",
+    "fullName": "1234",
+    "age": "1234",
+    "gender": "male",
+    "occupations": [
+      "manager"
+    ]
+  }
+}
